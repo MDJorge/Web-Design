@@ -1,0 +1,1130 @@
+/* TABLE OF CONTENTS
+  * 01. User Flairs
+  * 02. Flair Selector Fix
+  * 03. General
+  * 04. Header
+  * 05. Reddit Snoo
+  * 06. Pagename
+  * 07. Tabs
+  * 08. Subreddit Bar
+  * 09. User Bar
+  * 10. Sidebar
+  * 11. Search - from /r/MetroCSS
+  * 12. Sidebar Boxes
+  * 13. Tables
+  * 14. Lists
+  * 15. Subscribe/Shortcut/Dashboard Buttons - from /r/Naut
+  * 16. "Subscribers" and "Users Online" Change
+  * 17. Users Online Dot
+  * 18. Sidebar Icons
+  * 19. Moderator Box Title ("The A-team")
+  * 20. Hide search options using "xx"
+  * 21. Submit Buttons - from /r/Naut
+  * 22. Submit Button Warning
+  * 23. Submission Page Warning
+  * 24. Reminder To Post Source
+  * 25. Submissions Page Box
+  * 26. Links
+  * 27. Report Button Warnings
+  * 28. Linkflairs
+  * 29. Comments
+  * 30. RES Comment Boxes (for non-RES users)
+  * 31. Autowikibot hover to display - written by /u/Dropping_Fruits
+  * 32. RES keyNav
+  * 33. Wiki Page - from /r/Naut
+  * 34. Buttons - from /r/Naut
+  * 35. Nightmode Buttons - from /r/Naut
+  * 36. Stylesheet Tweaks
+  * 37. RES Nightmode Fixes
+*/
+
+/* 01. User Flairs */
+.flair {
+	border: none !important;
+	top: 20px;
+	padding: 0px;
+	background: url(%%flair%%);
+	display: inline-block;
+	width: 34px;
+	height: 29px; }
+
+#container li {	background: url(%%flair%%) no-repeat top left; }
+
+.flair-Flairmonoclehatpipe { background-position: 0 0; }
+
+.flair-Flairmonoclehat { background-position: -35px 0; }
+
+.flair-Flairmonocle { background-position: -70px 0; }
+
+.flair-Flair { background-position: -105px 0; }
+
+.flair-Minifig { background-position: -140px 0;	width: 34px; height: 29px; }
+
+.flair-Wikicontributor { background-position: -175px 0; }
+ 
+
+/* 02. Flair Selector Fix */
+.flairoptionpane ul { max-width: 180px; }
+
+
+/* 03. General */
+body {
+	font-family: "trebuchet ms",sans-serif;
+	background: #bbb url("%%bg%%");
+	position: relative;
+	min-width: 800px;
+	color: #333;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: Helvetica,Arial,'Nimbus Sans L',sans-serif;
+	line-height: 1.4; }
+
+
+/* 04. Header */
+#header, body.res.res-nightmode #header {
+	background-image: url(%%header-bg%%), url(%%bg-slice%%);
+	background-position: left top, left top;
+	background-repeat: no-repeat, repeat-x;
+	border-bottom: 1px solid #00425e;
+	height: 300px;
+	border-bottom: none; }
+
+body.res.res-nightmode #header { background-position: 0 -270px, 0 -270px; }
+
+#header-bottom-left, body.res-nightmode #header-bottom-left { background: transparent!important; font-size: larger; }
+
+
+/* 05. Reddit Snoo */
+#header-img { position: absolute; left: 30px; top: 165px; }
+
+
+/* 06. Pagename */
+.pagename a {
+	background: transparent url(%%side%%) no-repeat;
+	background-size: contain;
+    font-size: 0;
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    top: 162px;
+    left: 300px;  }
+
+
+/* 07. Tabs */
+#header #header-bottom-left>.pagename:last-child::after{ content: ""; height: 32px; }
+
+#header #header-bottom-left>.pagename:last-child::after, #header .tabmenu {
+	display: block;
+	margin: 0;
+	padding-left: 6px;
+	overflow: hidden;
+	text-shadow: 0 1px 0 #040404;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #5B92FA;
+	border-bottom: 3px solid #5B78FA;
+	height: 32px;
+	/*background: -webkit-linear-gradient(top, #4d90fe, #357ae8);
+	background: -moz-linear-gradient(top, #4d90fe, #357ae8);
+	background: linear-gradient(top, #4d90fe, #357ae8); */ }
+
+#header .tabmenu > li { display: block; float: left; margin: 0; padding: 0; }
+
+#header .tabmenu > li > a {
+	background: none;
+	display: block;
+	font-weight: normal;
+	color: #fff;
+	padding: 8px 13px; }
+
+#header .tabmenu > li > a:hover {
+	color: #fff;
+	background: rgba(91,159,250,0.75);
+	/*background: -webkit-linear-gradient(bottom, #5ba2fd, #4b8adb);
+	background: -moz-linear-gradient(bottom, #5ba2fd, #4b8adb);
+	background: linear-gradient(bottom, #5ba2fd, #4b8adb); */ }
+	
+body:not(.res.res-nightmode) #header .tabmenu > li.selected {
+    /*border-top: 3px solid #5b78fa;
+	border-left: 2px solid #5b6afa;*/
+	border-top: 3px solid #5B78FA;
+	border-left: 2px solid #5B78FA;
+	background: #5183e1;
+}
+
+#header .tabmenu > li.selected > a {
+	color: #fff;
+	border: none;
+	/*background: #4885f9;*/
+	/*border-left: 2px solid #5b6afa;
+	border-right: 2px solid #5b6afa;*/
+	/*padding: 6.5px 12px;*/
+	box-shadow: 1px 2px 2px 0px rgba(50, 50, 50, 0.75) inset;
+	/*background: -webkit-linear-gradient(bottom, #5ba2fd, #4b8adb);
+	background: -moz-linear-gradient(bottom, #5ba2fd, #4b8adb);
+	background: linear-gradient(bottom, #5ba2fd, #4b8adb);
+	box-shadow: 0 1px 1px #312e2d, inset 0 -2px 3px rgba(0, 0, 0, 0.2); */ }
+
+
+/* 08. Subreddit Bar */
+#sr-header-area { background: rgba(65,133,243,1); opacity: .5; color: #d1d1d1; border-bottom: none; transition: all .15s; }
+
+#sr-header-area:hover, #sr-header-area:focus { background: rgba(65,133,243,1); opacity: 1; border-bottom: none; }
+
+#sr-header-area a { color: #d1d1d1; }
+
+#sr-header-area:hover a, #sr-header-area:focus a { color: #d1d1d1; text-decoration: none; }
+
+#sr-header-area a:hover, #sr-header-area a:focus { color: #7CA9FF; text-decoration: none; }
+
+#sr-header-area .selected > a { color: #d1d1d1; }
+
+#sr-more-link { background: rgba(65,133,243,.5); opacity: .5; }
+
+.dropdown.srdrop .selected { color: #848484; background: none; padding-right: 5px; }
+
+.dropdown.srdrop .selected::after {
+	content: "";
+	display: inline-block;
+	margin-left: 5px;
+	width: 0;
+	height: 0;
+	border-left: solid 4px transparent;
+	border-right: solid 4px transparent;
+	border-top: solid 4px #848484; }
+
+
+/* 09. User Bar */
+#header-bottom-right {
+	background: none;
+	bottom: 7px;
+	right: 20px;
+	font-size: larger;
+	padding: 0!important;
+	color: #fff;
+	line-height: 16px!important; }
+
+#header-bottom-right .pref-lang, #header-bottom-right .user .userkarma { font-weight: normal!important; }
+
+#header-bottom-right > .user, #header-bottom-right > .flat-list, #header-bottom-right > .logout { vertical-align: middle;	display: inline-block; }
+
+#header-bottom-right .user { color: inherit; }
+
+#header-bottom-right .userkarma { border: none; }
+
+#header-bottom-right a { color: #fff; }
+
+#header-bottom-right .separator { visibility: hidden; }
+
+.res #header-bottom-right.res-navTop { top: auto!important; bottom: 7px!important; }
+
+.res #header-bottom-right.res-navTop #userbarToggle { background: none!important; border: none!important; color: inherit!important; padding: 0!important; }
+
+.res #header-bottom-right.res-navTop #userbarToggle.userbarShow { bottom: -4px!important; top: auto!important; min-height: auto!important }
+
+.res #header-bottom-right.res-navTop #userbarToggle.userbarShow ~ #mail, .res #header-bottom-right.res-navTop #userbarToggle.userbarShow ~ #modmail { display: none!important; }
+
+.res .gearIcon { background-position: -46px -0px; vertical-align: middle; top: auto!important; }
+
+.res .gearIcon.newNotification { background-position: -46px -32px; }
+
+.res #RESMainGearOverlay { border: none!important; margin-top: 1px!important; }
+
+.res #RESAccountSwitcherIconOverlay, .res #RESAccountSwitcherIcon { margin-right: 8px; }
+
+.res #RESAccountSwitcherIconOverlay::after, .res #RESAccountSwitcherIcon::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	border-left: solid 4px transparent;
+	border-right: solid 4px transparent;
+	border-top: solid 4px #fff; }
+
+.res #RESAccountSwitcherIconOverlay { background-image: none!important; border: none!important; margin-left: 1px!important; margin-top: 2px!important; }
+
+.res #RESAccountSwitcherIconOverlay::after {	border-top-color: #d1d1d1; }
+
+.res #RESAccountSwitcherIconOverlay, .res #RESAccountSwitcherIcon, .res #RESMainGearOverlay { background: none!important }
+
+.res #RESShortcutsEditContainer, .res #RESShortcutsSort, .res #RESShortcutsAdd, .res #RESShortcutsRight, .res #RESShortcutsLeft, .res #RESShortcutsTrash  { background: transparent!important; }
+
+.res #RESShortcutsSort, .res #RESShortcutsAdd, .res #RESShortcutsRight, .res #RESShortcutsLeft, .res #RESShortcutsTrash { color: #848484; font-size: 13px; }
+
+.res #sr-header-area a.subbarlink.RESShortcutsCurrentSub { color: #eaeaea!important; }
+
+.res .gearIcon  {
+	display:  inline-block !important;
+	background-image:  url('%%misc-sprite%%') !important;
+	background-repeat:  no-repeat !important;
+	width:  16px !important;
+	height:  16px !important; }
+
+.gearIcon { background-color: inherit!important; }
+
+
+/* 10. Sidebar */
+.side {
+    background: 0;
+	padding-top: 70px!important;
+	position: relative;
+	border: none;
+	margin: 10px 10px 0px 15px !important; }
+
+.side hr { visibility: hidden; }
+
+.titlebox .bottom { border: none; }
+
+.icon-menu li a, .titlebox form.toggle, .leavemoderator, .sidebox .spacer { background: transparent none; }
+
+.side .md { overflow: hidden; }
+
+.side .titlebox > h1 { font-size: 34px; letter-spacing: -1px; }
+
+body.res-nightmode .side .redditname a { color: #DDD !important; }
+
+.sidebox.submit .spacer, .sidebox.create { display: none; }
+
+.sidecontentbox .content { border: none; background-color: inherit; padding: 10px; }
+
+.icon-menu li { margin: 0 0 5px; }
+
+.side h1, .side h2, .side h3 { color: #222; }
+
+.side h1 { font-size: 19px; }
+
+.side h2 { font-size: 16px; }
+
+.side h3 { font-size: 14px; }
+
+.sidecontentbox .content { margin-top: 0; padding: 0; border: none; }
+
+
+/* 11. Search - from /r/MetroCSS */
+form#search input[type="text"] {
+	width: 262px;
+	padding: 12px 8px 12px 30px;
+	background: url("%%misc-sprite%%") -142px 12px no-repeat #fff;
+	border: 1px solid #dcdcdc;
+	font-family: sans-serif;
+	font-size: 13px;
+	margin-top: 22px; }
+
+#search input[type=text]:focus { border: 1px solid #cee3f8; }
+
+#searchexpando { padding-bottom: 10px; }
+
+
+/* 12. Sidebar Boxes */
+.side blockquote + hr { border-width: 0; width: 0; background-color: transparent; margin: 20px 0 0; }
+
+body.res-nightmode .side hr { border: 0 !important; border-bottom: 1px solid #000 !important; }
+
+.side blockquote {
+	border: 0 none;
+	/*padding: 15px;*/
+	margin: 0;
+	border: 1px solid #CCC;
+	background-color: #F5F5F5;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px; }
+	
+.side blockquote hr {
+    margin-left: -4px;
+    border: solid #ddd 1px;
+    margin-top: 0px;
+    visibility: visible; }
+
+.side blockquote h2 {
+    margin: 0;
+    margin-left: -4px;
+    padding-left: 4px;
+    background-color: #eee; }
+ 
+.side blockquote:first-of-type h2 { font-size: 15px; }
+
+.side blockquote li { border-bottom: solid gray 1px; }
+
+.side h4, .side h5, .side h6 { height: 0; }
+
+.side blockquote h1 ~ p { margin-left: 21px; }
+
+.side blockquote h1 { background-color: transparent !important; margin-bottom: 15px; }
+
+.side blockquote pre, .side blockquote code { color: #222 !important; }
+
+.side h6 + blockquote p, .side h5 + blockquote p, .side h4 + blockquote p { color: #000; }
+
+.side h6 + blockquote a, .side h5 + blockquote a, .side h4 + blockquote a { color: #369; }
+
+    /*.side .spacer .md h1, .side .spacer .md h2, .side .spacer .md h3 { background: transparent !important; }*/
+
+.side blockquote + p,.side p + blockquote,.side p + h4,.side p + h5,.side p + h6 { margin-top: 15px; }
+
+body.res-nightmode .side blockquote h1, body.res-nightmode .side blockquote h1 a { color: #EEE !important; }
+
+body.res-nightmode .side h4+blockquote,body.res-nightmode .side h5+blockquote,body.res-nightmode .side h6+blockquote { background-color: #111; }
+
+
+/* 13. Tables */
+.md table { margin: 10px 0; border: 1px solid #ccc; border-width: 1px 0 1px 1px; }
+
+.md table * { border: 0; }
+
+.md table th { text-align: center; }
+
+.md table thead{ border-bottom: 1px solid #ccc; }
+
+.md table thead{ background-color: #f3f3f3; }
+
+.md table tbody tr:nth-child(2n+1){ background-color: #f9f9f7; }
+
+.md table tbody tr:nth-child(2n){ background-color: #eaeaea; }
+
+.md table td, .md table th { padding: 4px 8px; border-right: 1px solid #ccc; }
+
+
+/* 14. Lists*/
+.md ul, .md ol { margin: 5px 0 5px 20px; padding: 0 0 0 10px; max-width: 60em; background-color: transparent; }
+
+.md ul { list-style: disc outside; }
+
+.md ul li, .md ol li { margin: 1px 10px 0 0; padding: 2px 0; }
+
+.md ul li ul, .md ol li ol { margin: 5px 0 5px 10px; }
+
+.md ul li p, .md ol li p, .wiki-page .wiki-page-content .md.wiki ul li p, .wiki-page .wiki-page-content .md.wiki ol li p { margin: 2px; }
+
+
+/* 15. Subscribe/Shortcut/Dashboard Buttons - from /r/Naut */
+.fancy-toggle-button .active {
+	padding: 3px 8px;
+	background-image: none!important;
+	outline: none!important;
+	border: 0px;
+	border-radius: 2px;
+	color: #fff!important;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: arial,sans-serif!important;
+	line-height: 26px;
+	transition: all 0.2s ease; }
+
+.fancy-toggle-button .add { background-color: #5b92fa; }
+
+.fancy-toggle-button .add:hover { background-color: #6599fa; text-decoration: none; }
+
+.fancy-toggle-button .add:active { background-color: #3863b6; }
+
+.fancy-toggle-button .remove {
+	background-color: #fff;
+	border: 1px solid #d4d4d4;
+	-webkit-box-shadow: 0 1px 0 #e2e0e0;
+	box-shadow: 0 1px 0 #e2e0e0;
+	font-size: 10px;
+	line-height: 16px;
+	color: #737373!important;
+	cursor: pointer;
+	transition: all 0.2s ease; }
+
+.fancy-toggle-button .remove:hover {
+	background-color: #fff;
+	color: #333;
+	border-bottom-width: 2px;
+	border-color: #bababa;
+	text-decoration: none; }
+
+.fancy-toggle-button .remove:active {
+	background-color: #e5e5e5;
+	border-color: #a7a7a7;
+	border-top-width: 2px;
+	color: #333; }
+
+.RESshortcutside {
+	padding: 0px 0px!important;
+	background: none repeat-x scroll center left!important;
+	background-color: transparent!important;
+	background-image: none!important;
+	border: 0px solid!important;
+	border-radius: 0px!important;
+	color: #5b92fa!important;
+	text-transform: capitalize!important;
+	font-weight: 500!important;
+	font-size: 14px!important;
+	line-height: 20px!important; }
+
+.RESshortcutside.remove {
+	padding: 0px 3px 0px 0px!important;
+	background-color: transparent!important;
+	background-image: none!important;
+	border: 0px solid!important;
+	color: #3b3b3b!important;
+	font-weight: lighter!important; }
+
+.RESDashboardToggle {
+	padding: 0px 0px!important;
+	background: none repeat-x scroll center left!important;
+	background-color: transparent!important;
+	background-image: none!important;
+	border: 0px solid!important;
+	border-radius: 0px!important;
+	color: #5b92fa!important;
+	text-transform: capitalize!important;
+	font-weight: 500!important;
+	font-size: 14px!important;
+	line-height: 20px!important; }
+
+.RESDashboardToggle.remove {
+	padding: 2px 6px 2px 0px!important;
+	background-color: transparent!important;
+	background-image: none!important;
+	border: 0px solid!important;
+	color: #3b3b3b!important;
+	font-weight: lighter!important; }
+
+
+/* 16. "Subscribers" and "Users Online" Change */
+div.titlebox span.word, div.titlebox span.word { display: none; }
+
+div.titlebox span.number:after { content: " Awwficionados"; }
+
+div.titlebox .users-online span.number:after { content: " Awwficionados here now"; }
+
+
+/* 17. Users Online Dot */
+.titlebox .users-online { margin: 5px 0px; }
+
+.titlebox .users-online:before {
+	background: none repeat scroll 0% 0% #5b92fa !important;
+	width: 10px !important;
+	height: 10px !important;
+	border-radius: 8px !important;
+	margin-top: 3px !important; }
+
+
+/* 18. Sidebar Icons*/
+.side .md h6:last-of-type {
+	background-color: transparent;
+	position: absolute;
+	top: 0px;
+	height: 48px;
+	width: 300px;
+	font-size: 0; }
+
+.side .md h6:last-of-type:before {
+	content: "Check Us Out";
+	font-size: 24px;
+	display: block;
+    text-align: center;
+}
+
+.side .md h6:last-of-type a {
+	height: 48px;
+	width: 48px;
+	padding: 0px;
+	background: #fff url(%%icons%%) no-repeat;
+	border: none;
+	border-radius: 2px;
+	transition: opacity 0.2s;
+	display: inline-block;
+	font-size: 0; }
+
+.side .md h6:last-of-type a:nth-of-type(1), .side .md h6:last-of-type a:nth-of-type(2), .side .md h6:last-of-type a:nth-of-type(3), .side .md h6:last-of-type a:nth-of-type(4), .side .md h6:last-of-type a:nth-of-type(5) { margin: 5px 5px; }
+
+.side .md h6:last-of-type a:nth-of-type(1){ margin-left: 10px; }
+
+.side .md h6:last-of-type a:hover { opacity: .75; }
+
+.side .md h6:last-of-type a[href*="wiki"] { background-position: 0 -96px; }
+
+.side .md h6:last-of-type a[href*="facebook"] { background-position: 0 0; }
+
+.side .md h6:last-of-type a[href*="awwducational.com"] { background-position: 0 -48px; }
+
+.side .md h6:last-of-type a[href*="imgur"] { background-position: 0 -144px; }
+
+.side .md h6:last-of-type a[href*="twitter"] { background-position: 0 -192px; }
+
+.side .md h6:last-of-type a[href*="youtube"] { background-position: 0 -240px; }
+
+
+/* 19. Moderator Box Title ("The A-team") */
+.side .helplink + .title h1 { display: none; }
+
+.side .helplink + .title:before {
+    background: url('%%misc-sprite%%') bottom left no-repeat;
+    display: inline-block;
+    height: 69px;
+    width: 164px;
+    content: ""; }
+
+
+/* 20. Hide search options using "xx" */
+html:lang(xx) .search-summary,html:lang(xx) .searchpane,html:lang(xx) .menuarea { display: none; }
+
+html:lang(xx) .pagename { visibility: hidden; }
+
+html:lang(xx) .pagename a { visibility: visible; }
+
+
+/* 21. Submit Buttons - from /r/Naut */
+.nub { display: none; }
+
+.morelink {
+	z-index: 97;
+	height: 32px;
+	background-color: #5B92FA;
+	background-image: none!important;
+	border: none;
+	border-radius: 2px;
+	transition: all 0.15s ease; }
+
+.morelink:hover { background-color: #7BA8FF; }
+
+.morelink:active { background-color: #3863B6; }
+
+.morelink a {
+	color: #fff!important;
+	letter-spacing: 0px;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: arial,sans-serif;
+	line-height: 32px; }
+
+.morelink a:hover { text-decoration:none; }
+
+
+/* 22. Submit Button Warning */
+.sidebox.submit:hover a { color: white; }
+
+.sidebox.submit.submit-link:hover:before {
+	position: absolute;
+	z-index: 1000;
+	display: block;
+	width: inherit;
+	margin-top: 35px;
+	text-align: center;
+	background-color: #DC143C;
+	color: #E0EEEE;
+	padding: 5px 0;
+	font-size: 16px;
+	content: "Please link DIRECTLY to an image, gif, or video!"; }
+
+
+/* 23. Submission Page Warning */
+#newlink > div:nth-child(6) > button:nth-child(1):hover a { color: white; }
+
+#newlink > div:nth-child(6) > button:nth-child(1):hover:before {
+	position: absolute;
+	z-index: 1000;
+	display: block;
+	width: inherit;
+	margin-top: 35px;
+	text-align: center;
+	background-color: #DC143C;
+	color: #E0EEEE;
+	padding: 5px 0;
+	font-size: 16px;
+	content: "Don't forget to leave a source for your fact in the comments!"; }
+
+
+/* 24. Reminder To Post Source */
+body.post-submitter.comments-page .link:not(.self):not(.linkflair):before, body.post-submitter.comments-page .sitetable> .linkflair-nosource:not(.self):before, body.post-submitter.comments-page .sitetable> .linkflair-notverified:not(.self):before {
+	content: "Thank you for submitting, don't forget to include a source for your fact in the comments section!";
+	background-color: rgb(246, 177, 178);
+	color: red;
+	font-weight: bolder;
+	border-radius: 2px;
+	border: 1px solid #dbdbdb;
+	padding: 7px 10px 7px 10px;
+	display: block;
+	position: absolute;
+	font-size: 12px;
+	text-align: center; }
+
+body.res.post-submitter.comments-page .link:not(.self):not(.linkflair):before, body.res.post-submitter.comments-page .sitetable> .linkflair-nosource:not(.self):before, body.res.post-submitter.comments-page .sitetable> .linkflair-notverified:not(.self):before { width: 98.2%; right: 300px; left: 0; top: 80px; }
+
+body.post-submitter.comments-page .link:not(.self):not(.linkflair):before, body.post-submitter.comments-page .sitetable> .linkflair-nosource:not(.self):before, body.post-submitter.comments-page .sitetable> .linkflair-notverified:not(.self):before { right: 336px; left: 7px; top: 392px; }
+
+body.comments-page .commentarea > .usertext { margin-top: 10px; }
+
+body.post-submitter.comments-page:not([class*="post-linkflair-"]):not(.self) .content .commentarea { padding-left: 0px !important; margin-top: 30px; }
+
+
+/* 25. Submission Page Box */
+#newlink .submit_text { border: 1px solid red; background-color: #fdd; position: absolute; top: 376px; }
+
+#newlink .submit_text h1 { color: #c33!important; }
+
+#newlink .submit_text .content .md { border: 1px solid #CCCCCC!important; border-radius: 4px!important; background: #F5F5F5; padding-left: 10px; }
+
+.submit-page .formtabs-content .spacer:first-child { margin-top: 135px; }
+
+.submit-page .infobar, #link-desc, #text-desc {	display: none!important; }
+
+
+/* 26. Links */
+.linkinfo .score .word, .linkinfo .score .number { font-size: 15px; }
+
+.thing.link {
+	padding: 8px 8px;
+	margin-left: 3px;
+	margin-bottom: 2px;
+	background: white;
+	margin-right: 333px; }
+
+.thing.link:first-of-type {	border-radius: 2px 2px 0 0; margin-top: 10px; }
+
+.thing.link:last-of-type { border-radius: 0 0 2px 2px; }
+
+.thing:not(.stickied) .title,.thing:not(.stickied) .title.loggedin { color: #2358d9!important; }
+
+.thing:not(.stickied) .title:visited,.thing:not(.stickied) .title.loggedin:visited { color: #6b387c!important; }
+
+.link .entry { border: none; }
+
+.link .rank { color: #d9d9d9; }
+
+div.thing .thumbnail img { border-radius: 2px; }
+
+.thumbnail { margin: 0 10px 0 5px; }
+
+.link .title { margin-right: 0; margin-bottom: 4px; }
+
+.domain, .tagline { color: #aaa; }
+
+
+/* 27. Report Button Warnings */
+.report-button .option:not(.error):hover:before {
+	color: black;
+	background-color: #CCF;
+	border: 1px solid #333;
+	border-radius: 4px;
+	content: "Please message the moderators if you click report, otherwise we won't know why it was reported.";
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	margin-left: 75px;
+	margin-top: 7px;
+	padding: 5px;
+	position: absolute;
+	text-align: center;
+	z-index: 1000; }
+
+.report-button .option .yes:before {
+	content: "Please leave a comment/message the moderators saying why you reported the post.";
+	color: red; }
+
+
+/* 28. Linkflairs */
+.linkflairlabel {
+	background: url("%%vertical-05%%") no-repeat 1px 1px;
+	background-color: #fff;
+	padding: 2px 5px;
+	left: 8px;
+	text-indent: 20px;
+	width: auto;
+	min-height: 14px;
+	min-width: 10px;
+	max-width: 10px;
+	margin-right: 5px;
+	color: transparent;
+	transition: max-width 1s, color 0.3s; }
+
+.linkflairlabel:hover {
+	max-width: 200px;
+	color: black; }
+
+.linkflair-notverified .linkflairlabel, span.linkflair-notverified {
+	background-position: 2px -139px;
+	background-color: #fcfcfc; }
+
+.linkflair-verified .linkflairlabel, span.linkflair-verified {
+	background-position: 2px -19px;
+	background-color: #eeffed; }
+
+.linkflair-false .linkflairlabel, span.linkflair-false {
+	background-position: 2px -79px;
+	background-color: #fff0f0; }
+
+.linkflair-modpick .linkflairlabel, span.linkflair-modpick {
+	background-position: 2px -259px;
+	background-color: #ffffed; }
+
+.linkflair-partiallytrue .linkflairlabel, .linkflair-nosource .linkflairlabel, .linkflair-questionable .linkflairlabel, .linkflair-theory .linkflairlabel, span.linkflair-partiallytrue, span.linkflair-nosource, span.linkflair-questionable, span.linkflair-theory {
+	background-position: 2px -99px;
+	background-color: #fcfcf0; }
+
+.linkflair-weeklyquestion .linkflairlabel, span.linkflair-weeklyquestion {
+	background-position: 2px -159px;
+	background-color: #eeffed; }
+
+.linkflair-weeklyquestionanswered .linkflairlabel, span.linkflair-weeklyquestionanswered {
+	background-position: 2px -179px;
+	background-color: #eeffed; }
+
+.linkflair-debated .linkflairlabel, span.linkflair-debated {
+	background-position: 2px -59px;
+	background-color: #fff; }
+
+.linkflair-verified.linkflair-happy .linkflairlabel, span.linkflair-verified.linkflair-happy, .linkflair-verified.linkflair-sad .linkflairlabel, span.linkflair-verified.linkflair-sad {
+	text-indent: 33px;
+	min-width: 28px;
+	max-height: 16px; }
+
+.linkflair-verified.linkflair-happy .linkflairlabel:before, span.linkflair-verified.linkflair-happy:before {
+	background: url("%%vertical-05%%") no-repeat;
+	background-position: 2px -240px;
+	background-color: transparent;
+	padding: 2px 10px;
+	margin-left: -20px;
+	content: " ";
+	font-size: 10px; }
+
+.linkflair-verified.linkflair-sad .linkflairlabel:before, span.linkflair-verified.linkflair-sad:before {
+	background: url("%%vertical-05%%") no-repeat;
+	background-position: 2px -300px;
+	background-color: transparent;
+	padding: 2px 10px;
+	margin-left: -20px;
+	content: " ";
+	font-size: 10px; }
+
+
+/* 29. Comments */
+.comment { overflow: hidden; }
+
+body.res .commentarea .RES-keyNav-activeElement .usertext.border .md { background-color: #FFC!important; }
+
+.content .commentarea { padding-left: 0px!important; }
+
+.panestack-title { border-bottom: medium none !important; }
+
+body.res .comment { margin: 0px 10px 2px; background: none repeat scroll 0% 0% #FFF!important; }
+
+.commentarea .menuarea { margin-left: 10px !important; }
+
+.commentarea { padding: 5px; color: #3b3b3b; overflow: hidden; }
+
+input[type="text"], textarea { border-radius: 2px; outline: medium none; border: 1px solid #FFF; }
+
+
+/* 30. RES Comment Boxes (for non-RES users) */
+body:not(.res) > .content { padding-right: 0; }
+
+body:not(.res) .comment div.child { border-left: none; }
+
+body:not(.res) .comment {
+	border-radius: 3px;
+	margin-right: 8px;
+	margin-top: 0;
+	margin-bottom: 8px;
+	border: 1px solid #e6e6e6;
+	padding: 5px 8px 0 5px;
+	overflow: hidden;
+	background: #fff; }
+
+body:not(.res) .comment .comment { margin-right: 0; background-color: #F7F7F8; }
+
+body:not(.res) .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	background-color: #fff!important; }
+
+body:not(.res) .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	background-color: #F7F7F8!important; }
+
+.sitetable .child * { position: relative!important; }
+
+
+/* 31. Autowikibot hover to display - written by /u/Dropping_Fruits */
+.comment .md h5+h6+h4+p,.comment .md h5+h6+h4+p+hr,.comment .md h5+h6+h4+p+hr+blockquote,.comment .md h5+h6+h4+p+hr+blockquote+hr,.comment .md h5+h6+h4+p+hr+blockquote+hr+p,.comment .md h5+h6+h4+p+hr+blockquote+hr+p+p {
+ /*font-size: 0px;*/
+	display: none; }
+
+.comment .md:hover h5+h6+h4+p,.comment .md:hover h5+h6+h4+p+hr,.comment .md:hover h5+h6+h4+p+hr+blockquote,.comment .md:hover h5+h6+h4+p+hr+blockquote+hr,.comment .md:hover h5+h6+h4+p+hr+blockquote+hr+p,.comment .md:hover h5+h6+h4+p+hr+blockquote+hr+p+p {
+ /*font-size: 1em;*/
+	display: block; }
+
+.comment .md h5+h6+h4:after {
+	content: "Autowikibot post. Hover to view";
+	font-weight: normal; }
+
+.comment .md:hover h5+h6+h4:after {
+	content: ""; }
+
+
+/* 32. RES keyNav */
+.entry.RES-keyNav-activeElement .usertext.border .usertext-body { background-color: rgb(255, 255, 204) !important; }
+
+.thing > *:not(.pretty-form) { position: relative; z-index: 1; }
+
+.RES-keyNav-activeElement+div.child { position: static!important; }
+
+#siteTable .RES-keyNav-activeElement,.sitetable .RES-keyNav-activeElement { background-color: transparent!important; outline: none!important; }
+
+.res .sitetable .thing { position: relative!important; }
+
+.RES-keyNav-activeElement+div.child:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #F0F3FC;
+	z-index: 0; }
+
+
+/* 33. Wiki page - from /r/Naut */
+.wiki-page .wiki-page-content { 
+    margin: 5px 10px 9px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    overflow: hidden; }
+
+.wiki-page > .content { padding-bottom: 1px; }
+
+.wiki-page .wiki-page-content .md.wiki h1 { margin-top: 0.5em; color: #333; font-size: 1.5em; font-family: Arial, sans-serif; }
+
+.wiki-page .wiki-page-content .md.wiki h2 { font-size: 1.45em; }
+
+.wiki-page .wiki-page-content .md.wiki h3 { font-size: 1.4em; }
+
+.wiki-page .wiki-page-content .md.wiki h4 { font-size: 1.35em; }
+
+.wiki-page .wiki-page-content .md.wiki p, .wiki-page .wiki-page-content .md.wiki .md.wiki blockquote {
+    color: #404040;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5em; }
+
+.wiki-page .pageactions { border: none; border-radius: 0px; }
+
+.wiki-page .pageactions .wikiaction { text-transform: capitalize; font-size: 110%; }
+
+.wiki-page .pageactions .wikiaction:hover { background-color: transparent; }
+
+.wiki-page .pageactions .wikiaction-current { background-color: #5b92fa; border-radius: 0px; color: #fff; }
+
+.wiki-page .pageactions .wikiaction-current:hover { background-color: #528bf3; text-decoration: none; }
+
+.wiki-page .wiki-page-content .md.wiki>.toc>ul { padding: 10px; border: 1px solid #e5e5e5; font-weight: normal; font-size: 110%; }
+
+.wiki-page .wiki-page-content .discussionlink {
+    display: inline-block;
+    position: relative;
+    top: inherit;
+    right: inherit;
+    left: inherit;
+    padding: inherit;
+    width: 175px; }
+
+.wiki-page .wiki-page-content .discussionlink a { padding-left: 0px; }
+
+.wiki-page .nextprev { display: none; }
+
+.wiki-page-content em, .wiki-page-content form#editform label { font-size: 120%; }
+
+
+/* 34. Buttons - from /r/Naut */
+button,#search input[type="submit"],.wiki-page .wiki-page-content .wiki_button {
+	margin: 3px 3px 3px 3px;
+	padding: 0px 8px 1px 8px;
+	background-color: #ffffff;
+	border: 1px solid #d4d4d4;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 1px 0 #e2e0e0;
+	box-shadow: 0 1px 0 #e2e0e0;
+	color: #737373!important;
+	text-transform: capitalize;
+	font-weight: bold;
+	line-height: 26px;
+	cursor: default; }
+
+button:hover,#search input[type="submit"]:hover,.wiki-page .wiki-page-content .wiki_button:hover {
+	padding-bottom: 0px;
+	border-color: #bababa;
+	border-bottom-width: 2px;
+	color: #333!important; }
+
+button:active,#search input[type="submit"]:active,.wiki-page .wiki-page-content .wiki_button:active {
+	padding-bottom: 0px;
+	background-color: #e5e5e5;
+	border-color: #a7a7a7;
+	border-top-width: 2px;
+	border-bottom-width: 1px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #333!important;
+	line-height: 25px; }
+
+.res .blueButton {
+	padding: 2px 3px!important;
+	background-color: #53a93f!important;
+	border: none!important;
+	border-radius: 0px!important; }
+
+.RESSubscriptionButton {
+	background-color: white!important;
+	border: 0px solid!important;
+	border-radius: 0px!important;
+	color: #5b92fa!important; }
+
+
+/* 35. Nightmode buttons - from /r/Naut */
+body.res-nightmode button, body.res-nightmode #search input[type="submit"], body.res-nightmode .wiki-page .wiki-page-content .wiki_button {
+	padding: 0px 8px 0px 8px!important;
+	background-color: transparent!important;
+	border: 1px solid #414955!important;
+	border-radius: 0px!important;
+	-webkit-box-shadow: none!important;
+	box-shadow: none!important;
+	color: #e5e5e5!important;
+	line-height: 28px!important; }
+
+body.res-nightmode button:hover, body.res-nightmode #search input[type="submit"]:hover, body.res-nightmode .wiki-page .wiki-page-content .wiki_button:hover {
+	padding-bottom: 0px!important;
+	border-color: #414955!important;
+	border-width: 1px!important;
+	color: #fff!important;
+	line-height: 28px!important;
+	background-color: #1C1F26!important; }
+
+body.res-nightmode button:active, body.res-nightmode #search input[type="submit"]:active, body.res-nightmode .wiki-page .wiki-page-content .wiki_button:active {
+	padding-bottom: 0px!important;
+	background-color: #1C1F26!important;
+	border-color: #414955!important;
+	border-width: 1px!important;
+	-webkit-box-shadow: none!important;
+	box-shadow: none!important;
+	color: #fff!important;
+	line-height: 28px!important; }
+
+body.res-nightmode .RESSubscriptionButton { background-color: transparent!important; }
+
+
+/* 36. Stylesheet Tweaks */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape), /*this stuff specifically targets only ios devices (which don't have the cool code editor) */
+screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait), 
+screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape), 
+screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait), 
+screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape), 
+screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+    .stylesheet-customize-container { width: 100%; }
+    #subreddit_stylesheet { display: block; overflow: hidden; padding-right: 80px; }
+    .sheets { margin: 0; }
+    
+    #stylesheet_contents {
+        font-family: Consolas, Monaco, monospace;
+        padding: 12px;
+        background-color: #222;
+        color: #ace;
+        border: 8px solid #222;
+    }
+}
+
+body.res-nightmode #stylesheet_contents { background-color: #111; border-color: #111; }
+
+
+/* 37. RES Nightmode Fixes */
+body.res.res-nightmode .midcol, body.res.res-nightmode .arrow.up, body.res.res-nightmode .arrow.upmod, body.res.res-nightmode .arrow.down, body.res.res-nightmode .arrow.down{ background-color: transparent!important; }
+
+body.res.res-nightmode .arrow { background-image: url(%%misc-sprite%%)!important; }
+
+body.res.res-nightmode #header #header-bottom-left > .pagename:last-child::after, body.res.res-nightmode #header .tabmenu {
+	border-color: #201e1d!important;
+	background: -webkit-linear-gradient(top, #2c2928, #1f1d1c);
+	background: -moz-linear-gradient(top, #2c2928, #1f1d1c);
+	background: linear-gradient(top, #2c2928, #1f1d1c);
+	height: 32px; }
+
+body.res.res-nightmode #header .tabmenu > li > a { color: #9e9e9e; }
+
+body.res.res-nightmode #header .tabmenu > li > a:hover {
+	color: #d1d1d1;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+	background: linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28)); }
+
+body.res.res-nightmode #header .tabmenu > li.selected > a {
+	color: #eaeaea;
+	border-color: transparent;
+	height: 26px;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+	background: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+	box-shadow: 0 1px 1px #312e2d, inset 0 -2px 3px rgba(0, 0, 0, 0.2); }
+
+body.res.res-nightmode  > #header #header-bottom-right { background: none !important; }
+
+body.res.res-nightmode #header-bottom-right, body.res.res-nightmode #header-bottom-right a { color: #9e9e9e; }
+
+body.res.res-nightmode #sr-header-area { background: rgba(0, 0, 0, 1); opacity: .5; }
+
+body.res.res-nightmode #sr-header-area:hover, body.res.res-nightmode #sr-header-area:focus { background: rgba(0, 0, 0, 1); opacity: 1; }
+
+body.res.res-nightmode #sr-header-area a:hover, body.res.res-nightmode #sr-header-area a:focus { color: #7CA9FF; }
+
+body.res.res-nightmode .RES-keyNav-activeElement, body.res.res-nightmode .RES-keyNav-activeElement .usertext-body, body.res.res-nightmode .RES-keyNav-activeElement .usertext-body .md, body.res.res-nightmode .RES-keyNav-activeElement .usertext-body .md p, body.res.res-nightmode .commentarea .RES-keyNav-activeElement .noncollapsed, body.res.res-nightmode .RES-keyNav-activeElement .noncollapsed .md, body.res.res-nightmode .RES-keyNav-activeElement .noncollapsed .md p {
+    background-color: transparent !important; }
+
+body.res.res-nightmode .RES-keyNav-activeElement+div.child:before{ background: rgba(66, 66, 66, 0.5) !important; }
+
+body.res.res-nightmode .thing.link { background: rgba(24, 24, 24, 0.2); }
+
+body.res.res-nightmode form#search input[type="text"] { background-color: rgba(24, 24, 24, 0.2)!important; background: url("%%misc-sprite%%") -142px 12px no-repeat!important; }
+
+body.res.res-nightmode input[type="text"], body.res.res-nightmode textarea { background-color: #222!important; color: #808080; }
+
+body.res.res-nightmode input[type="text"]:focus, body.res.res-nightmode textarea:focus { background-color: #2f2f2f!important; color: #eee; }
+
+body.res.res-nightmode input#file { background: none 0 transparent!important; }
+
+body.res.res-nightmode .commentingAs { color: rgba(221,221,221,.8) }
+
+body.res.res-nightmode .md table { border-color: #444; }
+
+body.res.res-nightmode .md table thead, body.res.res-nightmode .side blockquote h2 { border-bottom: 1px solid #444; background-color: #090909; }
+
+body.res.res-nightmode .md table tr:nth-child(odd) { background-color: #292929; }
+
+body.res.res-nightmode .md table tr:nth-child(even) { background-color: #222; }
+
+body.res.res-nightmode .md table td, .res-nightmode .md table th { border-right: 1px solid #444; }
+
+body.res.res-nightmode .morelink {
+	z-index: 97;
+	height: 32px;
+	background-color: #262322;
+	background-image: none!important;
+	border: none!important;
+	border-radius: 2px!important;
+	transition: all 0.15s ease!important;
+	box-shadow: none!important;
+    outline: none!important; }
+
+body.res.res-nightmode .morelink:hover { background-color: #22201f; }
+
+body.res.res-nightmode .morelink:active { background-color: #1f1d1c; }
+
+body.res.res-nightmode .morelink a {
+	color: #fff!important;
+	letter-spacing: 0px;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: arial,sans-serif;
+	line-height: 32px;
+	border: none!important;
+	box-shadow: none!important;
+    outline: none!important; }
+
+body.res.res-nightmode .morelink a:hover { text-decoration:none; }s
