@@ -1,0 +1,692 @@
+/* General */
+body {
+	background: #333 url(%%background-img%%) fixed;
+	background-size: 100% 100%;
+}
+
+body, .side, .titlebox form.toggle, .leavemoderator, .side .redditname a, .sidebox .subtitle, .titlebox .bottom, .sidecontentbox .title h1, .gadget span.score, .bottommenu, .bottommenu a, .fancy-settings h1 strong, .side .md {
+	color: #dfdfdf;
+}
+
+.side a, .side .tagline a {
+    color: #ec6206
+}
+
+a {
+	color: #3A89C9;
+}
+
+.panestack-title, .commentarea .menuarea *, .markdownEditor-wrapper *, .flair-settings h1 {
+    color: #dfdfdf!important;
+}
+
+.submit-page .submit.content, .linefield , .linefield .markdownEditor-wrapper *, .comment .markdownEditor-wrapper *, .link .md, #sr-header-area, .comment .md p, .madeVisible, .report-reasons, .report-form, .stamp {
+	color: #000!important;
+}
+
+.footer {
+    background-color: #E2E2E2;
+}
+
+.gadget .midcol {
+    width: 50px;
+}
+
+/* Flairs */
+
+.flair {padding:0;background:transparent url(%%IceCream%%) no-repeat;color:black;border:0;border-radius:0;text-indent:-9999px;width:25px;height:21px;}
+.flair-Avocado {background-image: url(%%Avocado%%);}
+.flair-PorkChop {background-image: url(%%PorkChop%%);}
+.flair-Cucumber {background-image: url(%%Cucumber%%);}
+.flair-Fish {background-image: url(%%Fish%%);}
+.flair-Olive {background-image: url(%%Olive%%);}
+.flair-Steak {background-image: url(%%Steak%%);}
+.flair-Bread {background-image: url(%%Bread%%);}
+.flair-Loaf {background-image: url(%%Loaf%%);}
+.flair-Drumstick {background-image: url(%%Drumstick%%);}
+.flair-Eggs {background-image: url(%%Eggs%%);}
+.flair-Sandwich {background-image: url(%%Sandwich%%);}
+.flair-HotDog {background-image: url(%%HotDog%%);}
+
+/* Header */
+#header {
+	background: transparent none;
+	height: 149px;
+	max-height: 149px;
+}
+
+#header-bottom-right {
+    top: 19px;
+    border-radius: 0px 0px 0px 3px;
+    padding-bottom: 0!important;
+    height: 30px;
+    padding: 4px 4px 7px;
+    position: absolute;
+    right: 0px;
+    bottom: auto;
+    background-color: transparent;
+    padding: 4px;
+    line-height: 12px;
+    border-bottom-left-radius: 7px;
+}
+
+#header-bottom-right a {
+	color: #EC6206!important;
+}
+
+img#header-img {
+  display: none;
+}
+
+#header-img-a {
+  background: url('%%snoo%%');
+  height: 86px;
+  width: 62px;
+  content: "";
+  display: block;
+  left: 7px;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+
+
+#header-img-a:hover, #header-img-a:focus {
+	-webkit-animation: eat 1s steps(75) infinite;
+	-moz-animation: eat 1s steps(75) infinite;
+	-ms-animation: eat 1s steps(75) infinite;
+	-o-animation: eat 1s steps(75) infinite;
+	animation: eat 1s steps(75) infinite;
+}
+
+@-webkit-keyframes eat {
+   from { background-position: 0 0; }
+     to { background-position: 0 -6480px; }
+}
+
+@-moz-keyframes eat {
+   from { background-position: 0 0; }
+     to { background-position: 0 -6480px; }
+}
+
+@-ms-keyframes eat {
+   from { background-position: 0 0; }
+     to { background-position: 0 -6480px; }
+}
+
+@-o-keyframes eat {
+   from { background-position: 0 0; }
+     to { background-position: 0 -6480px; }
+}
+
+@keyframes eat {
+   from { background-position: 0 0; }
+     to { background-position: 0 -6480px; }
+}
+
+#header .tabmenu {
+    height: 20px;
+    margin-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/*name*/
+
+.pagename a {
+	position: absolute;
+	display: block;
+	top: 40px;
+	left: 50%;
+	margin-left: -218px;
+	height: 79px;
+	width: 436px;
+	background: url(%%logo%%) no-repeat;
+	content: "";
+	opacity: 0.9;
+	text-indent: -3000px;
+}
+
+.pagename:hover {
+	opacity: 1;
+}
+
+/*Changes submit buttons*/
+
+.nub {
+	display: none;
+}
+
+.morelink, .mlh {
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: gray;
+	border: 0;
+	font-weight: 400;
+	line-height: 34px;
+	height: 32px;
+	box-sizing: border-box;
+	width: 300px;
+	text-align: center;
+	background-image: none!important;
+}
+
+.morelink a {
+	color: #FFF;
+	transition: all .75s ease;
+}
+
+.morelink a:hover {
+	background-color: #5b5758;
+}
+
+/*"Names of Things"*/
+
+.titlebox .subscribers .word {
+	display: none;
+}
+
+.titlebox .subscribers .number:after {
+	content: " sandwich lovers";
+}
+
+.titlebox .users-online span.word {
+	display: none;
+}
+
+.titlebox .users-online span.number:after {
+	content: " happily munching away";
+}
+
+.sidecontentbox .helplink + .title h1 {
+	font-size: 0 !important;
+}
+
+.sidecontentbox .helplink + .title h1:before {
+	font-size: 20pt !important;
+	content: "Chefs";
+}
+
+/*tab menu*/
+#header {
+	border: none;
+}
+
+body.listing-page #header .tabmenu li:nth-of-type(3), /*rising*/
+body.listing-page #header .tabmenu li:nth-of-type(4) /*controversial*/ {
+	display: none!important;
+}
+
+#header .tabmenu li {
+	border: 0px;
+	margin: 0px 5px;
+	display: inline-block;
+}
+
+#header .tabmenu li a {
+	height: 30px;
+	font-family: "Segoe UI",Arial,Sans-Serif;
+	font-size: 0;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0px 20px;
+	background: url(%%tabs%%) no-repeat;
+	font-weight: normal;
+}
+
+#header .tabmenu li.selected a {
+	border: 0px!important;
+	background: url(%%y-tabs%%) no-repeat;
+}
+
+#header .tabmenu li a:hover {
+	border: 0px;
+	background: url(%%y-tabs%%) no-repeat;
+}
+
+#header .tabmenu li.selected a:hover {
+	background: url(%%tabs%%) no-repeat;
+}
+
+#header .tabmenu {
+	height: 20px;
+	margin-bottom: 8px;
+}
+
+#header .tabmenu li a[href*="/eatsandwiches"], #header .tabmenu li a[href*="/eatsandwiches"]:hover, #header .tabmenu li.selected a[href*="/eatsandwiches"] {
+	background-position: 50% 0;
+	width: 30px;
+}#header .tabmenu li a[href*="/hot/"], #header .tabmenu li a[href*="/hot/"]:hover, #header .tabmenu li.selected a[href*="/hot/"] {
+	background-position: 50% 0;
+	width: 30px;
+}#header .tabmenu li a[href*="/new/"], #header .tabmenu li a[href*="/new/"]:hover, #header .tabmenu li.selected a[href*="/new/"] {
+	background-position: 50% -31px;
+	width: 41px;
+}#header .tabmenu li a[href*="/top/"], #header .tabmenu li a[href*="/top/"]:hover, #header .tabmenu li.selected a[href*="/top/"] {
+	background-position: 50% -62px;
+	width: 30px;
+}#header .tabmenu li a[href*="/gilded/"], #header .tabmenu li a[href*="/gilded/"]:hover, #header .tabmenu li.selected a[href*="/gilded/"] {
+	background-position: 50% -93px;
+	width: 47px;
+}#header .tabmenu li a[href*="/wiki/"], #header .tabmenu li a[href*="/wiki/"]:hover, #header .tabmenu li.selected a[href*="/wiki/"] {
+	background-position: 50% -124px;
+	width: 41px;
+}#header .tabmenu li a[href*="/ads/"], #header .tabmenu li a[href*="/ads/"]:hover, #header .tabmenu li.selected a[href*="/ads/"] {
+	background-position: 50% -155px;
+	width: 86px;
+}#header .tabmenu li a#viewImagesButton, #header .tabmenu li a#viewImagesButton:hover, #header .tabmenu li.selected a#viewImagesButton {
+	background-position: 50% -186px;
+	width: 113px;
+}#header .tabmenu li a.modtools-on, #header .tabmenu li a.modtools-on:hover, #header .tabmenu li.selected a.modtools-on {
+	background-position: 50% -217px;
+	width: 81px;
+}#header .tabmenu li a[href*="redditmetrics"], #header .tabmenu li a[href*="redditmetrics"]:hover, #header .tabmenu li.selected a[href*="redditmetrics"] {
+	background-position: 50% -248px;
+	width: 116px;
+}#header .tabmenu li a[href*="/comments/"], #header .tabmenu li a[href*="/comments/"]:hover, #header .tabmenu li.selected a[href*="/comments/"] {
+	background-position: 50% -279px;
+	width: 90px;
+}#header .tabmenu li a[href*="/related/"], #header .tabmenu li a[href*="/related/"]:hover, #header .tabmenu li.selected a[href*="/related/"] {
+	background-position: 50% -310px;
+	width: 59px;
+}#header .tabmenu li a[href*="/duplicates/"], #header .tabmenu li a[href*="/duplicates/"]:hover, #header .tabmenu li.selected a[href*="/duplicates/"] {
+	background-position: 50% -341px;
+	width: 144px;
+}
+
+/*end tabmenu*/
+
+
+/*downvote warning*/
+
+.arrow.down:hover:before {
+	position: absolute;
+	display: block;
+	z-index: 1000;
+	width: 210px;
+	padding: 5px;
+	border: 0px solid #333;
+	background: gray;
+	content: "Don't be a dick";
+	text-align: center;
+	font-size: 10px;
+	color: white;
+	font-weight: bold;
+	margin-left: 45px;
+	margin-top: 0px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/* Links */
+.linkinfo {
+	border: none;
+	padding: 8px 8px 4px;
+	color: #555559;
+	background-color: #e2e2e2;
+	text-align: center;
+}
+
+.linkinfo .score .number {
+	margin: 4px 0;
+	font-weight: normal;
+	display: block;
+}
+
+.linkinfo .score .word {
+	display: none;
+}
+
+/* Side */
+
+.titlebox .md h1 {
+    font-weight: bold;
+    font-size: 1.85em;
+}
+
+.titlebox .md h2 {
+    background-color: rgba(0,0,0,.15);
+    color: #dfdfdf;
+    text-decoration: underline;
+    font-size: 2em;
+    display: inline-block;
+    padding-right: 2px;
+}
+
+.titlebox .md h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: rgba(0,0,0,.15);
+    display: block;
+    text-align: center;
+}
+
+
+.titlebox .md h3 a[href*="dinks"]:after {
+    content: ".";
+    font-size: 1.1em;
+    color: #dfdfdf;
+}
+
+.titlebox .md h3 .RESUserTag, .titlebox .md h3 .voteWeight, .res .md h3 userTagged {
+    display: none!important;
+}
+
+.titlebox ol li {
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.side {
+	margin-left: 15px;
+	margin-right: 10px;
+	background: transparent;
+	border: none;
+}
+
+.side > :first-child {
+	margin-top: 10px !important;
+}
+
+.icon-menu li a {
+	background: none;
+}
+
+input[type="text"], textarea {
+	border-radius: 2px;
+	outline: medium none;
+	border: 1px solid #FFF;
+}
+
+#search input[type=text]:focus {
+	border: 1px solid #cee3f8;
+}
+
+#searchexpando {
+	padding-bottom: 10px;
+}
+
+.sidebox .spacer {
+	background: none;
+}
+
+.sidecontentbox .content {
+	margin-top: 0;
+	padding: 0;
+	border: none;
+}
+
+input[type="text"], textarea {
+	border-radius: 2px !important;
+	outline: medium none !important;
+	border: 1px solid #FFF !important;
+}
+
+.titlebox .users-online {
+	margin: 5px 0px;
+}
+
+.titlebox .users-online:before {
+	background: none repeat scroll 0% 0% #7BB850 !important;
+	width: 10px !important;
+	height: 10px !important;
+	border-radius: 8px !important;
+	margin-top: 3px !important;
+}
+
+.titlebox form.toggle,.leavemoderator {
+	background: none;
+}
+
+
+/* Links */
+
+.thing.link {
+	padding: 8px 8px;
+	margin-left: 3px;
+	margin-bottom: 2px;
+	background: white;
+	overflow: hidden;
+}
+
+.thing.link:first-of-type {
+	border-radius: 2px 2px 0 0;
+	margin-top: 10px;
+}
+
+.thing.link:last-of-type {
+	border-radius: 0 0 2px 2px;
+}
+
+.thing:not(.stickied) .title,.thing:not(.stickied) .title.loggedin {
+	color: #2358d9!important;
+}
+
+.thing:not(.stickied) .title:visited,.thing:not(.stickied) .title.loggedin:visited {
+	color: #6b387c!important;
+}
+
+.link .entry {
+	border: none;
+}
+
+.link .rank {
+	color: #d9d9d9;
+}
+
+div.thing .thumbnail img {
+	border-radius: 2px;
+}
+
+.thumbnail {
+	margin: 0 10px 0 5px;
+}
+
+.link .title {
+	margin-right: 0;
+	margin-bottom: 4px;
+}
+
+.domain,.tagline {
+	color: #aaa;
+}
+
+.thing > *:not(.pretty-form) {
+	position: relative;
+	z-index: 1;
+}
+
+.RES-keyNav-activeElement+div.child {
+	position: static!important;
+}
+
+#siteTable .RES-keyNav-activeElement,.sitetable .RES-keyNav-activeElement {
+	background-color: transparent!important;
+	outline: none!important;
+}
+
+.res .sitetable .thing {
+	position: relative!important;
+}
+
+.RES-keyNav-activeElement+div.child:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #F0F3FC;
+	z-index: 0;
+}
+
+
+/* comments */
+
+body.res .commentarea .RES-keyNav-activeElement .usertext.border .md {
+    background-color: #FFC!important;
+}
+
+.content .commentarea {
+    padding-left: 0px!important
+}
+
+.panestack-title {
+	border-bottom: medium none !important;
+}
+
+body.res .comment {
+	margin: 0px 10px 2px;
+	background: none repeat scroll 0% 0% #FFF!important;
+}
+
+.commentarea .menuarea {
+	margin-left: 10px !important;
+}
+
+body.res.comments-page .commentarea > .usertext {
+	margin-top: 10px !important;
+}
+
+.commentarea {
+	padding: 5px;
+	color: #3b3b3b;
+	overflow: hidden;
+}
+
+body:not(.res) > .content {
+	padding-right: 0;
+}
+
+body:not(.res) .comment div.child {
+	border-left: none;
+}
+
+body:not(.res) .comment {
+	border-radius: 3px;
+	margin-right: 8px;
+	margin-top: 0;
+	margin-bottom: 8px;
+	border: 1px solid #e6e6e6;
+	padding: 5px 8px 0 5px;
+	overflow: hidden;
+        background: #fff;
+}
+
+body:not(.res) .comment .comment {
+	margin-right: 0;
+	background-color: #F7F7F8;
+}
+
+body:not(.res) .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	background-color: #fff!important;
+}
+
+body:not(.res) .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment .comment, body:not(.res) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	background-color: #F7F7F8!important;
+}
+
+.sitetable .child * {
+	position: relative!important;
+}
+
+
+/* Arrows */
+.arrow.up, .arrow.down {
+	background-image: url(%%plate%%);
+	background-position: 0px 3px;
+	height: 20px;
+	width: 40px;
+}
+
+.arrow.downmod, .arrow.upmod {
+	background-image: url(%%fullplate%%);
+	background-position: 0px 0px;
+	height: 20px;
+	width: 40px;
+}
+
+/*This allows arrows wider than 15px just change it to the width of your arrows*/
+.midcol, body > .content .midcol {
+	min-width: 40px !important;
+}
+
+.thing .midcol {
+	overflow: visible;
+	z-index: 9999;
+}
+
+/* Buttons */
+
+button,#search input[type="submit"],.wiki-page .wiki-page-content .wiki_button{
+	margin:3px 3px 3px 3px;
+	padding:0px 8px 1px 8px;
+	background-color:#ffffff;
+	border:1px solid #d4d4d4;
+	border-radius:2px;
+	-webkit-box-shadow:0 1px 0 #e2e0e0;
+	box-shadow:0 1px 0 #e2e0e0;
+	color:#737373!important;
+	text-transform:capitalize;
+	font-weight:bold;
+	line-height:26px;
+	cursor:default; }
+button:hover,#search input[type="submit"]:hover,.wiki-page .wiki-page-content .wiki_button:hover {
+	padding-bottom:0px;
+	border-color:#bababa;
+	border-bottom-width:2px;
+	color:#333!important; }
+button:active,#search input[type="submit"]:active,.wiki-page .wiki-page-content .wiki_button:active {
+	padding-bottom:0px;
+	background-color:#e5e5e5;
+	border-color:#a7a7a7;
+	border-top-width:2px;
+	border-bottom-width:1px;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	color:#333!important;
+	line-height:25px; }
+.res .blueButton {
+	padding:2px 3px!important;
+	background-color:#53a93f!important;
+	border:none!important;
+	border-radius:0px!important; }
+.RESSubscriptionButton {
+	background-color:white!important;
+	border:0px solid!important;
+	border-radius:0px!important;
+	color:#5b92fa!important; }
+
+/* Nightmode buttons*/
+
+body.res-nightmode button,body.res-nightmode #search input[type="submit"],body.res-nightmode .wiki-page .wiki-page-content .wiki_button{
+	padding: 0px 8px 0px 8px;
+	background-color: transparent;
+	border: 1px solid #414955;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #e5e5e5!important;
+	line-height: 28px; }
+body.res-nightmode button: hover,body.res-nightmode #search input[type="submit"]: hover,body.res-nightmode .wiki-page .wiki-page-content .wiki_button: hover{
+	padding-bottom: 0px;
+	border-color: #414955;
+	border-width: 1px;
+	color: #fff!important;
+	line-height: 28px;
+	background-color: #1C1F26; }
+body.res-nightmode button: active,body.res-nightmode #search input[type="submit"]: active,body.res-nightmode .wiki-page .wiki-page-content .wiki_button: active{
+	padding-bottom: 0px;
+	background-color: #1C1F26;
+	border-color: #414955;
+	border-width: 1px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #fff!important;
+	line-height: 28px; }
+.RESSubscriptionButton { background-color:transparent!important; }
